@@ -3,23 +3,31 @@
     <span> LIVROS PREFERIDOS</span>
   </mat-toolbar>
 
-  <table mat-table [dataSource]="books" class="mat-elevation-z8">
-    <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
+  <div *ngIf="books$ | async as books; else loading">
+    <table mat-table [dataSource]="books" class="mat-elevation-z8">
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>Título</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.title }}
+        </td>
+      </ng-container>
 
-    <!-- title Column -->
-    <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef>Título</th>
-      <td mat-cell *matCellDef="let element">{{ element.title }}</td>
-    </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Categoria</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.category }}
+          <mat-icon aria-hidden="false" aria-label="Genêro do livro">{{
+            element.category | category
+          }}</mat-icon>
+        </td>
+      </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef>Categooria</th>
-      <td mat-cell *matCellDef="let element">{{ element.category }}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+  <div class="loading-spinner">
+    <ng-template #loading> <mat-spinner></mat-spinner> </ng-template>
+  </div>
 </mat-card>
