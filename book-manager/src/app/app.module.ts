@@ -6,16 +6,28 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navigation/navbar/navbar.component';
+import { FooterComponent } from './navigation/footer/footer.component';
+import { APP_BASE_HREF } from '@angular/common';
+import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent, FooterComponent],
   imports: [
+    AngularSvgIconModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_BASE_HREF,
+      useValue: '/',
+    },
+    provideAngularSvgIcon(),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

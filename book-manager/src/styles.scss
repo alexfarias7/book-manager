@@ -1,7 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-
 @use "@angular/material" as mat;
 @import "@angular/material/theming";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 @include mat.core();
 
 $custom-app-primary: mat.define-palette(mat.$blue-palette);
@@ -21,11 +22,46 @@ $custom-theme: mat.define-light-theme(
 @include mat.all-component-colors($custom-theme);
 @include mat.core-color($custom-theme);
 
-html,
-body {
-  height: 100%;
+$indigo-50: #e8eaf6;
+$indigo-100: #c5cae9;
+$indigo-200: #9fa8da;
+$indigo-300: #7986cb;
+$indigo-400: #5c6bc0;
+$indigo-500: #3f51b5;
+$indigo-600: #3949ab;
+$indigo-700: #303f9f;
+$indigo-800: #283593;
+$indigo-900: #1a237e;
+$indigo-A100: #8c9eff;
+$indigo-A200: #536dfe;
+$indigo-A300: #3d5afe;
+$indigo-A700: #304ffe;
+
+.container {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  inset: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $indigo-100;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
 }

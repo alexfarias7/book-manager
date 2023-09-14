@@ -7,9 +7,9 @@ export class CategoryPipe implements PipeTransform {
   transform(value: string): string {
     switch (value) {
       case 'fantasia':
-        return 'code';
+        return 'assets/icons/wizard.svg';
       case 'ficção científca':
-        return 'computer';
+        return 'assets/icons/science-fiction.svg';
     }
     return 'code';
   }
