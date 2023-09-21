@@ -1,18 +1,42 @@
-<header>
+<!-- <header>
   <nav class="container">
     <ul>
-      <li>
-        <a
-          ><svg-icon
-            src="/assets/icons/book.svg"
-            [svgStyle]="{ 'width.px': 40, height: 40 }"
-            [routerLink]="['/home']"
-          >
-          </svg-icon>
-        </a>
-      </li>
+      <a
+        ><svg-icon
+          src="/assets/icons/book.svg"
+          [svgStyle]="{ 'width.px': 40, height: 40 }"
+          [routerLink]="['/home']"
+        >
+        </svg-icon>
+      </a>
       <li><a [routerLink]="['/home']">Início</a></li>
       <li><a [routerLink]="['/books']">Meus Livros</a></li>
     </ul>
+    <a href="#">Entrar</a>
+  </nav>
+</header>
+ -->
+<header>
+  <nav class="navbar container">
+    <div>
+      <a class="logo" [routerLink]="['/home']"
+        ><svg-icon
+          src="/assets/icons/book.svg"
+          [svgStyle]="{ 'width.px': 40, height: 40 }"
+        >
+        </svg-icon>
+        <span>BookManager</span>
+      </a>
+    </div>
+    <div>
+      <span class="burger" (click)="toggleMenu()">
+        <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
+      </span>
+      <ul class="menu" [class.is-open]="isMenuOpen">
+        <li><a [routerLink]="['/home']" class="menu-item">Início</a></li>
+        <li><a [routerLink]="['/books']" class="menu-item">Meus Livros</a></li>
+        <li><a href="#" class="menu-item">Entrar/Cadastrar</a></li>
+      </ul>
+    </div>
   </nav>
 </header>
