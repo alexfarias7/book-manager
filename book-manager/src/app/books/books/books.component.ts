@@ -13,6 +13,7 @@ import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/err
 export class BooksComponent {
   books$: Observable<Book[]>;
   displayedColumns = ['title', 'category'];
+  loadingSpiner: boolean = false;
 
   constructor(private booksServices: BooksService, public dialog: MatDialog) {
     this.books$ = this.booksServices.list().pipe(
@@ -27,5 +28,9 @@ export class BooksComponent {
     this.dialog.open(ErrorDialogComponent, {
       data: errorMsg,
     });
+  }
+
+  onLoadingSpiner() {
+    return this.loadingSpiner;
   }
 }

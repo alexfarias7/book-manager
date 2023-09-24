@@ -1,10 +1,102 @@
-table {
-  width: 100%;
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #1a237e;
 }
 
 .loading-spinner {
-  padding: 25px;
-  background-color: rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: #3949ab;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  justify-content: center;
+}
+.card-book {
+  background-color: #9fa8da;
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 520px;
+  padding: 0;
+  margin: 0;
+}
+.card-header {
+  width: 100%;
+  height: 300px;
+}
+.cover-img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 5px;
+}
+
+.card-content {
+  color: #1a237e;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  p {
+    margin: 0;
+  }
+  .book-author {
+    color: #5c6bc0;
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.book-title {
+  color: #1a237e;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 8px;
+  height: 60px;
+  padding: 0 16px;
+  overflow: hidden; /* remove o estouro do elemento */
+  text-overflow: ellipsis; /* adiciona “...” no final */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* quantidade de linhas */
+  -webkit-box-orient: vertical;
+}
+.card-category {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #1a237e;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .b-action {
+    display: flex;
+    height: 32px;
+    color: #e8eaf6;
+    background-color: #3949ab;
+    width: 100%;
+  }
 }

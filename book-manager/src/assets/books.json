@@ -1,4 +1,30 @@
 [
-  { "_id": "01", "title": "o caminho dos reis", "category": "fantasia" },
-  { "_id": "02", "title": "guerra do velho", "category": "ficção científca" }
+  {
+    "_id": "01",
+    "title": "O senhor dos aneis e a sociedade do anel",
+    "category": "fantasia",
+    "urlCover": "https://m.media-amazon.com/images/I/81hCVEC0ExL._SY425_.jpg",
+    "author": "J.R.R. Tolkien"
+  },
+  {
+    "_id": "02",
+    "title": "guerra do velho",
+    "category": "ficção",
+    "urlCover": "https://m.media-amazon.com/images/I/71qYuQsuiUL._SY425_.jpg",
+    "author": "John Scalzi"
+  },
+  {
+    "_id": "03",
+    "title": "Skyward: Conquiste as estrelas",
+    "category": "fantasia",
+    "urlCover": "https://m.media-amazon.com/images/I/91RHxRwp1+L._SY425_.jpg",
+    "author": "Brandon Sanderson"
+  },
+  {
+    "_id": "04",
+    "title": "monalisa overdrive",
+    "category": "ficção",
+    "urlCover": "https://m.media-amazon.com/images/I/91Y0teqbtZL._SL1500_.jpg",
+    "author": " William Gibson"
+  }
 ]

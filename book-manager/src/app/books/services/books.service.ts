@@ -13,7 +13,7 @@ export class BooksService {
   list() {
     return this.httpClient.get<Book[]>(this.API).pipe(
       first(),
-      delay(3000),
+      delay(1000),
       tap((books) => console.log(books))
     );
   }

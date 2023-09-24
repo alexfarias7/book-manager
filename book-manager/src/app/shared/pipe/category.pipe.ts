@@ -8,7 +8,7 @@ export class CategoryPipe implements PipeTransform {
     switch (value) {
       case 'fantasia':
         return 'assets/icons/wizard.svg';
-      case 'ficção científca':
+      case 'ficção':
         return 'assets/icons/science-fiction.svg';
     }
     return 'code';
