@@ -6,14 +6,17 @@ import { BooksComponent } from './books/books.component';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { SharedModule } from '../shared/shared.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { BookFormsComponent } from './book-forms/book-forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [BooksComponent],
+  declarations: [BooksComponent, BookFormsComponent],
   imports: [
     AngularSvgIconModule,
     CommonModule,
     BooksRoutingModule,
     AppMaterialModule,
+    ReactiveFormsModule,
     SharedModule,
   ],
 })

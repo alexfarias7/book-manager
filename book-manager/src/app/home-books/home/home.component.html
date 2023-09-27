@@ -14,3 +14,23 @@
   sunt obcaecati tempore assumenda accusantium eius voluptatum, amet iusto qui
   officia ut ipsa eveniet illo totam at corporis. Possimus.]
 </p>
+<!-- <ng-container matColumnDef="actions">
+  <mat-header-cell *matHeaderCellDef>
+    <button mat-mini-fab color="accent" aria-label="adicionar livro">
+      <mat-icon>add</mat-icon> adicionar livro
+    </button>
+  </mat-header-cell>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+ -->
+
+<button
+  mat-mini-fab
+  color="accent"
+  aria-label="adicionar livro"
+  (click)="onAdd()"
+>
+  <mat-icon>add</mat-icon>
+</button>

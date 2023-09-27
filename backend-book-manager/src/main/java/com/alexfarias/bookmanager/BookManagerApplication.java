@@ -25,6 +25,7 @@ public class BookManagerApplication {
 			book.setCategory("fantasia");
 			book.setAuthor("j rr token");
 			book.setUrlCover("https://m.media-amazon.com/images/I/41RBd2DvmgL._SY445_SX342_.jpg");
+			book.setShelf("comprado");
 			bookRepository.save(book);
         };
 	   }

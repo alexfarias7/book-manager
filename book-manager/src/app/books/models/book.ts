@@ -4,4 +4,5 @@ export interface Book {
   category: string;
   urlCover: string;
   author: string;
+  shelf: string;
 }

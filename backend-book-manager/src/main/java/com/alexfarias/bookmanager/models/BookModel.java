@@ -27,6 +27,9 @@ public class BookModel {
     @Column(length = 50, nullable = false)
     private String category;
 
+    @Column(length = 50, nullable = false)
+    private String shelf;
+
     @Column(nullable = false)
     private String urlCover;
 
