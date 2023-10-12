@@ -2,17 +2,19 @@ package com.alexfarias.bookmanager.responses;
 
 import com.alexfarias.bookmanager.responses.wrappers.BookItemsWrapper;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
-@Setter
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class BookWrapperResponse {
-    private int totalItems;
+   private String kind;
+   private  int totalItems;
+  @JsonProperty("items")
 	private BookItemsWrapper[] items;
-}
+} 
  
 

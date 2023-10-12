@@ -19,6 +19,10 @@ export class BookFormsComponent {
     });
   }
 
+  buscarIsbn(isbn: string) {
+    return this.service.loadByIsbn(isbn);
+  }
+
   private OnSuccess() {
     this._snackBar.open('livro salvo com sucesso', '', { duration: 3000 });
     this.onCancel();
@@ -43,6 +47,7 @@ export class BookFormsComponent {
       urlCover: [null],
       author: [null],
       shelf: [null],
+      isbn: [null],
     });
   }
 }

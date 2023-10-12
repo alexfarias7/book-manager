@@ -1,8 +1,5 @@
 package com.alexfarias.bookmanager.responses.wrappers;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -25,6 +22,7 @@ public class BookVolumeInfoWrapper {
    private int pageCount;
    private String[] categories;
    private String language;
-	private Map<String, String> imageLinks = new HashMap<String, String>();
+	private ImageLinks imageLinks;
+   private IndustryIdentifiers[] industryIdentifiers;
 
 }

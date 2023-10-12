@@ -10,6 +10,7 @@ import { NavbarComponent } from './navigation/navbar/navbar.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent],
@@ -17,6 +18,7 @@ import { AngularSvgIconModule, provideAngularSvgIcon } from 'angular-svg-icon';
     AngularSvgIconModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,

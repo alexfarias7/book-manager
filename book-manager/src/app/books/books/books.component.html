@@ -1,8 +1,25 @@
 <main>
   <div class="container">
     <h3>Meus livros Selecionados</h3>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>ISBN</mat-label>
+        <input
+          matInput
+          placeholder="digite a isbn"
+          value="9786555604283"
+          name="isbn"
+        />
+      </mat-form-field>
+      <div>
+        <p>{{ books$ }}</p>
+      </div>
+
+      <button (click)="obterLivrosCadastrados()">pesquisar</button>
+    </form>
     <section>
-      <mat-card *ngFor="let book of books$ | async" class="card-book">
+      <!--       <mat-card *ngFor="let book of books$ | async" class="card-book">
         <div *ngIf="books$ | async as books; else loading" class="card">
           <mat-card-header class="card-header">
             <img
@@ -43,7 +60,7 @@
             <mat-spinner class="spinner"></mat-spinner>
           </ng-template>
         </div>
-      </mat-card>
+      </mat-card> -->
     </section>
   </div>
 </main>

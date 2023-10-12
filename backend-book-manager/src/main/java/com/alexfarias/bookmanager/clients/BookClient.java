@@ -1,6 +1,7 @@
 package com.alexfarias.bookmanager.clients;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import com.alexfarias.bookmanager.responses.BookWrapperResponse;
@@ -41,6 +42,7 @@ public class BookClient {
                                 .bodyToMono(BookWrapperResponse.class);
         }
 
+   //     @GetMapping("{title}/json")
         public Flux<BookWrapperResponse> findBookByTitle(String title) {
                 log.info("Listando todos os livros cadastrados pelo titulo " + title);
                 return webClient

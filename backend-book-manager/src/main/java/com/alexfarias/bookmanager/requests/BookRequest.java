@@ -4,5 +4,8 @@ import lombok.Getter;
 
 @Getter
 public class BookRequest {
-    private String title;
+    private String tittle;
+    private String author;
+    private String isbn;
+
 }
